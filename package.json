@@ -56,16 +56,5 @@
     "url": "git+https://github.com/webcomponents/polyfills.git",
     "directory": "packages/shadycss"
   },
-  "scripts": {
-    "build": "npm run build:interface && gulp",
-    "build:interface": "npm run clean:interface && tsc",
-    "build:watch": "chokidar --initial 'src/**/*.js' 'ts_src/**/*.ts' --ignore 'src/interface.js' -c 'npm run build'",
-    "clean:interface": "rimraf 'src/interface.*' .tsbuildinfo",
-    "debug": "gulp debug",
-    "format:interface": "prettier --write 'ts_src/**/*.ts'",
-    "lint": "eslint src entrypoints",
-    "lint:interface": "(cd ts_src && eslint '**/*.ts')",
-    "prepack": "npm run build"
-  },
   "version": "1.10.1"
 }
